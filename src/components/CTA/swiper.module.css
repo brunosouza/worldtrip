@@ -1,0 +1,18 @@
+.mySwiper:global {
+  --swiper-pagination-bullet-inactive-color: var(--chakra-colors-dark-info);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-color: var(--chakra-colors-highlight-100);
+  --swiper-pagination-bullet-width: 16px;
+  --swiper-pagination-bullet-height: 16px;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-navigation-color: var(--chakra-colors-highlight-100);
+  /* --swiper-navigation-size: 60px; */
+}
+
+.mySwiper p + p {
+  margin-top: 0 !important;
+}
+
+.mySwiper img {
+  filter: brightness(0.7);
+}
