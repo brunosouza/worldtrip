@@ -9,6 +9,7 @@ import { Hero } from "../components/Hero";
 import { TravelTypes } from "../components/TravelTypes";
 
 import { getPrismicClient } from "../services/prismic";
+import ApiSearchResponse from "@prismicio/client/types/ApiSearchResponse";
 
 type Continent = {
   slug: string;
@@ -38,7 +39,7 @@ export default function Home({ continents }: ContinentProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
-  const response = await prismic.query(
+  const response: ApiSearchResponse = await prismic.query(
     [Prismic.predicates.at("document.type", "continent")],
     {
       fetch: ["continent.name", "continent.subheading", "continent.banner"],

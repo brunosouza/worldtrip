@@ -47,6 +47,9 @@ export const getServerSideProps: GetServerSideProps = async ({
     {}
   );
 
+  // console.log(JSON.stringify(response, null, 2));
+  // console.log(response.data);
+
   const continent = {
     slug: response.uid,
     name: RichText.asText(response.data.name),
