@@ -10,11 +10,13 @@ import { TopCities } from "../../components/TopCities";
 import { getPrismicClient } from "../../services/prismic";
 
 interface ContinentProps {
-  slug: string;
-  name: string;
-  subheading: string;
-  cover: string;
-  description: string;
+  continent: {
+    slug: string;
+    name: string;
+    subheading: string;
+    cover: string;
+    description: string;
+  };
 }
 
 export default function Cotinent({ continent }: ContinentProps) {

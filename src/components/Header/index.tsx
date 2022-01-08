@@ -11,7 +11,7 @@ export function Header() {
         variant="unstyled"
         my="auto"
       ></IconButton> */}
-      <Link href="/" m="auto" unstyled>
+      <Link href="/" m="auto">
         <Image w={184} h={45} src="../images/logo.svg" alt="WorldTrip" />
       </Link>
     </Flex>
