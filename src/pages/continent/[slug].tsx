@@ -8,6 +8,7 @@ import { Header } from "../../components/Header";
 import { TopCities } from "../../components/TopCities";
 
 import { getPrismicClient } from "../../services/prismic";
+import { Document } from "@prismicio/client/types/documents";
 
 interface ContinentProps {
   continent: {
@@ -40,7 +41,11 @@ export const getServerSideProps: GetServerSideProps = async ({
   const { slug } = params;
 
   const prismic = getPrismicClient(req);
-  const response = await prismic.getByUID("continent", String(slug), {});
+  const response: Document = await prismic.getByUID(
+    "continent",
+    String(slug),
+    {}
+  );
 
   const continent = {
     slug: response.uid,
